@@ -24,10 +24,17 @@ namespace RegistroCandidatos.Models
         [DataType(DataType.Date)]
         public DateTime FechaDeNacimiento { get; set; }
 
+        //Relacion con la tabla genero Uno a Muchos
+        [ForeignKey("Genero")]
+        public int ID_Genero { get; set; }
+        public Genero Genero { get; set; }
+
 
         [Display(Name ="Trabajo Actual")]
         public string TrabajoActual{ get; set; }
 
+
+        //Este campo se manejara como un campo de moneda
         [Display(Name ="Expectativa Salarial")]
         public string ExpectativaSalarial { get; set; }
     }
