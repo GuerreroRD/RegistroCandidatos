@@ -1,1 +1,1 @@
-"# Registro-Candidatos" 
+# RegistroCandidatos
