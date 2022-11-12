@@ -15,12 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\GuerreroRD\source\repos\RegistroCandidatos\RegistroCandidatos
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Candidatos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Candidatos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Candidatos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Candidatos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Candidatos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GuerreroRD/source/repos/RegistroCandidatos/RegistroCandidatos/Views/Shared/Error.cshtml]
