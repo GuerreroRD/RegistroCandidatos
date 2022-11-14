@@ -5,57 +5,87 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<div class="container mt-5 ">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-header"><h5 class="text-azulmapre text-uppercase">Informacion Solicitante</h5></div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.Nombres)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.Nombres)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.Apellidos)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.Apellidos)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.Cedula)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.Cedula)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.FechaDeNacimiento)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.FechaDeNacimiento)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.Genero)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.Genero)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.TrabajoActual)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.TrabajoActual)</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <strong class="text-azulmapre mb-0">@Html.DisplayNameFor(model => model.ExpectativaSalarial)</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">@Html.DisplayFor(model => model.ExpectativaSalarial)</p>
+                    </div>
+                </div>
+                <hr>
+                
+            </div>
+        </div>
 
-<div>
-    <h4>Candidato</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cedula)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cedula)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombres)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombres)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellidos)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaDeNacimiento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaDeNacimiento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Genero)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Genero)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TrabajoActual)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TrabajoActual)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ExpectativaSalarial)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ExpectativaSalarial)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.ID_Candidato">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+    </div>
+
+
+
+
+    <div class="mt-3">
+        <a class="btn btn-VerdeReservas col-2" asp-action="Edit" asp-route-id="@Model?.ID_Candidato"><i class="fa-solid fa-pen-to-square me-2"></i>Editar informacion</a> |
+        <a class="btn btn-VerdeReservas col-2" asp-action="Index"><i class="fa-regular fa-circle-left me-2"></i>Volver</a>
+    </div>
+
 </div>
