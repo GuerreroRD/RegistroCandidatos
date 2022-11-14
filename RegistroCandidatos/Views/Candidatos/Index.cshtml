@@ -23,15 +23,15 @@
     <table id="tbCandidatos" class="table table-striped  w-100 border">
         <thead>
             <tr class="text-azulmapre">
-                <th>#ID</th>
-                <th>NOMBRES</th>
-                <th>APELLIDOS</th>
-                <th>CEDULA</th>
-                <th>GENERO</th>
-                <th>FECHA DE NACIMIENTO</th>
-                <th>TRABAJO ACTUAL</th>
-                <th>EXPECTATIVA SALARIAL</th>
-                <th></th>
+                <th class="text-verdeReservas te">#ID</th>
+                <th class="text-verdeReservas">NOMBRES</th>
+                <th class="text-verdeReservas">APELLIDOS</th>
+                <th class="text-verdeReservas">CEDULA</th>
+                <th class="text-verdeReservas">GENERO</th>
+                <th class="text-verdeReservas">FECHA DE NACIMIENTO</th>
+                <th class="text-verdeReservas">TRABAJO ACTUAL</th>
+                <th class="text-verdeReservas">EXPECTATIVA SALARIAL</th>
+                <th class="text-verdeReservas"></th>
 
 
 
@@ -60,9 +60,23 @@
 
             $('#tbCandidatos tbody').on('click', '[id*=btnEditar]', function () {
                 var row = table.row($(this).parents('tr')).data();
-                var identificador = row.tutor_Id;
+                var identificador = row.candidato_Id;
                 console.log(identificador);
-                window.open(`/Tutores/Edit/${identificador}`, '_self');
+                window.open(`/Candidatos/Edit/${identificador}`, '_self');
+            });
+
+            $('#tbCandidatos tbody').on('click', '[id*=btnDetalle]', function () {
+                var row = table.row($(this).parents('tr')).data();
+                var identificador = row.candidato_Id;
+                console.log(identificador);
+                window.open(`/Candidatos/Details/${identificador}`, '_self');
+            });
+
+            $('#tbCandidatos tbody').on('click', '[id*=btnEliminar]', function () {
+                var row = table.row($(this).parents('tr')).data();
+                var identificador = row.candidato_Id;
+                console.log(identificador);
+                window.open(`/Candidatos/Delete/${identificador}`, '_self');
             });
 
             var table = $("#tbCandidatos").DataTable({
@@ -85,6 +99,7 @@
                 "serverSide": true,
                 "searching": true,
                 "filter": true,
+                "autoWidth": true,
 
 
                 "columns": [
@@ -95,17 +110,16 @@
                     { "data": "genero", name: "genero" },
                     { "data": "fechaDeNacimiento", name: "fechaDeNacimiento" },
                     { "data": "trabajoActual", name: "trabajoActual" },
-                    { "data": "expectativaSalarial", name: "expectativaSalarial" },
+                    { "data": "expectativaSalarial", name: "expectativaSalarial"},
                     {
-                        "data": null, title: 'ACCIONES',
-                        "render": function () { return '<div class=""><i  class="fa-solid fa-pen-to-square btn btn-azulmapre me-2" id="btnEditar"></i><i class="fa-solid fa-trash btn btn-azulmapre" id="btnEliminar"></i></div>' }
+                        "data": null, title: 'ACCIONES', "width": "13%",
+                        "render": function () { return '<div class=""><i  class="fa-solid fa-pen-to-square btn btn-VerdeReservas me-2" id="btnEditar"></i><i  class="fa-solid fa-file-lines btn btn-VerdeReservas me-2" id="btnDetalle"></i><i class="fa-solid fa-trash btn btn-danger" id="btnEliminar"></i></div>' }
                     },
 
                 ]
 
-
-
-
+                   
+                    
 
             });
 

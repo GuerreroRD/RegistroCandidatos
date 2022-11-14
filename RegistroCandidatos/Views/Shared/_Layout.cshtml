@@ -9,13 +9,17 @@
     <link href="~/lib/datatables/responsive-2.3.0/css/responsive.datatables.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RegistroCandidatos.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/FontAwesome/css/all.css" />
+    <link rel="stylesheet" href="~/lib/FontAwesome/css/regular.css" />
+    <link rel="stylesheet" href="~/lib/FontAwesome/css/fontawesome.css" />
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <img src="/img/banreservas-Logo.png" class="navbar-brand "width="268"/>
-                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RegistroCandidatos</a>*@
+                
+                <a class="navbar-brand" asp-area="" asp-controller="Candidatos" asp-action="Index"><img src="/img/banreservas-Logo.png" class="navbar-brand " width="268" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,8 +35,8 @@
     </div>
 
     <footer class="border-top footer text-muted bg-VerdeReservas">
-        <div class="container text-white">
-            &copy; 2022 - RegistroCandidatos - <a href="https://www.banreservas.com/">Privacy</a>
+        <div class="container text-white d-flex justify-content-center">
+            &copy; 2022 - Registro Candidatos - Prueba Tecnica David Fermin
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -42,6 +46,9 @@
     <script src="~/lib/datatables/responsive-2.3.0/js/responsive.datatables.min.js"></script>
     <script src="~/lib/imask/imask.js"></script>
     <script src="~/lib/simplemoneymask/simple-mask-money.js"></script>
+    <script src="~/lib/FontAwesome/js/all.js"></script>
+    <script src="~/lib/FontAwesome/js/regular.js"></script>
+    <script src="~/lib/FontAwesome/js/fontawesome.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
