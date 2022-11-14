@@ -13,7 +13,7 @@ namespace RegistroCandidatos.Data
         //Insertar aqui los modelos para que puedan ser afectados por las migraciones.
 
         public DbSet<Candidato> Candidato { get; set; }
-        public DbSet<Genero> Genero { get; set; }
+        
 
 
     }

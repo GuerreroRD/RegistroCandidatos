@@ -44,7 +44,7 @@ namespace RegistroCandidatos.Migrations
                     b.Property<DateTime>("FechaDeNacimiento")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ID_Genero")
+                    b.Property<int>("Genero")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombres")
@@ -59,41 +59,7 @@ namespace RegistroCandidatos.Migrations
                     b.HasIndex("Cedula")
                         .IsUnique();
 
-                    b.HasIndex("ID_Genero");
-
                     b.ToTable("Candidato");
-                });
-
-            modelBuilder.Entity("RegistroCandidatos.Models.Genero", b =>
-                {
-                    b.Property<int>("ID_Genero")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Genero"), 1L, 1);
-
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_Genero");
-
-                    b.ToTable("Genero");
-                });
-
-            modelBuilder.Entity("RegistroCandidatos.Models.Candidato", b =>
-                {
-                    b.HasOne("RegistroCandidatos.Models.Genero", "Genero")
-                        .WithMany("Candidato")
-                        .HasForeignKey("ID_Genero")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Genero");
-                });
-
-            modelBuilder.Entity("RegistroCandidatos.Models.Genero", b =>
-                {
-                    b.Navigation("Candidato");
                 });
 #pragma warning restore 612, 618
         }

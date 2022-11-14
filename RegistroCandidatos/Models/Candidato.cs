@@ -5,6 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RegistroCandidatos.Models
 {
+	public enum NombreGenero
+	{
+		Masculino,
+		Femenino,
+		Otros
+
+	}
     //Este codigo activa el campo Cedula como unico aplicandole un indice
     [Index(nameof(Cedula), IsUnique = true)]
     public class Candidato
@@ -12,26 +19,25 @@ namespace RegistroCandidatos.Models
         [Key, Required]
         public int ID_Candidato { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "La cedula es requerida.")]
         [Display(Name = "Cedula")]
         public string Cedula { get; set; }
-        [Required]
-        [Display(Name ="Nombres")]
+
+        [Required(ErrorMessage = "Los nombres son requeridos.")]
+        [Display(Name = "Nombres")]
         public string Nombres { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Los apellidos son requeridos.")]
         [Display(Name = "Apellidos")]
         public string Apellidos { get; set; }
 
-        [Display(Name ="Fecha de Nacimiento")]
+        [Required(ErrorMessage = "La fecha de nacimiento es requerida.")]
+        [Display(Name = "Fecha de Nacimiento")]
         [DataType(DataType.Date)]
         public DateTime FechaDeNacimiento { get; set; }
 
-        //Relacion con la tabla genero Uno a Muchos
-        [ForeignKey("Genero")]
-        public int ID_Genero { get; set; }
-        public Genero Genero { get; set; }
-
+        [Required(ErrorMessage = "El genero es requerido.")]
+        public NombreGenero Genero { get; set; }
 
         [Display(Name ="Trabajo Actual")]
         public string TrabajoActual{ get; set; }

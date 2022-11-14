@@ -5,59 +5,142 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
 
-<h4>Candidato</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Cedula" class="control-label"></label>
-                <input asp-for="Cedula" class="form-control" />
-                <span asp-validation-for="Cedula" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nombres" class="control-label"></label>
-                <input asp-for="Nombres" class="form-control" />
-                <span asp-validation-for="Nombres" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Apellidos" class="control-label"></label>
-                <input asp-for="Apellidos" class="form-control" />
-                <span asp-validation-for="Apellidos" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FechaDeNacimiento" class="control-label"></label>
-                <input asp-for="FechaDeNacimiento" class="form-control" />
-                <span asp-validation-for="FechaDeNacimiento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_Genero" class="control-label"></label>
-                <select asp-for="ID_Genero" class ="form-control" asp-items="ViewBag.ID_Genero"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="TrabajoActual" class="control-label"></label>
-                <input asp-for="TrabajoActual" class="form-control" />
-                <span asp-validation-for="TrabajoActual" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ExpectativaSalarial" class="control-label"></label>
-                <input asp-for="ExpectativaSalarial" class="form-control" />
-                <span asp-validation-for="ExpectativaSalarial" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-warning alert-dismissible fade show w-100" style="height:4.5rem;" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @Html.ValidationSummary(false, "Ha ocurrido un error: ")
+        </div>
+    }
+</div>
+<div class="row card mt-5">
+    <h4 class="text-verdeReservas text-uppercase mt-3 ms-5 ps-5">Registro Candidatos</h4><br />
+
+
+    <form asp-action="Create" class="container ms-5 ps-5">
+        <div asp-validation-summary="None" class="text-danger"></div>
+        <div class="row">
+            <div class="d-flex col-12 mb-2">
+                <div class="col-5 me-3">
+                    <div class="form-group">
+                        <label asp-for="Nombres" class="control-label"></label>
+                        <input asp-for="Nombres" class="form-control" />
+                        <span asp-validation-for="Nombres" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="form-group">
+                        <label asp-for="Apellidos" class="control-label"></label>
+                        <input asp-for="Apellidos" class="form-control" />
+                        <span asp-validation-for="Apellidos" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex col-lg-12 mb-2">
+                <div class="col-5 me-3">
+                    <div class="form-group">
+                        <label asp-for="Cedula" class="control-label"></label>
+                        <input asp-for="Cedula" class="form-control" id="nCedula" />
+                        <span asp-validation-for="Cedula" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="form-group">
+                        <label asp-for="FechaDeNacimiento" class="control-label"></label>
+                        <input asp-for="FechaDeNacimiento" class="form-control" />
+                        <span asp-validation-for="FechaDeNacimiento" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex col-lg-12 mb-2">
+                <div class="col-5 me-3">
+                    <div class="form-group">
+                        <label asp-for="Genero" class="control-label"></label>
+                        <select asp-for="Genero" class="form-control" asp-items="@Html.GetEnumSelectList<NombreGenero>()">
+                            <option selected disabled value="">Seleccione un genero</option>
+                        </select>
+                        <span asp-validation-for="Genero" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="form-group">
+                        <label asp-for="TrabajoActual" class="control-label"></label>
+                        <input asp-for="TrabajoActual" class="form-control" />
+                        <span asp-validation-for="TrabajoActual" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex col-lg-12 mb-2">
+                <div class="col-5 me-3">
+                    <div class="form-group">
+                        <label asp-for="ExpectativaSalarial" class="control-label"></label>
+                        <input asp-for="ExpectativaSalarial" class="form-control" />
+                        <span asp-validation-for="ExpectativaSalarial" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <br>
+        <div class="form-group col-sm-12 col-md-12 col-lg-12">
+            <button type="submit" class="btn btn-VerdeReservas col-sm-2 col-md-2 col-lg-2"><i class="fa-regular fa-floppy-disk me-2"></i>Añadir</button>
+        </div>
+
+    </form>
+    <br />
+
+
 </div>
 
+<div class="mt-3">
+    <a asp-action="Index" class="btn btn-VerdeReservas col-sm col-sm-2 col-md col-md-2 col-lg col-lg-2"><i class="fa-regular fa-circle-left me-2"></i>Volver</a>
+</div>
+
+
+
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+
+
+        var phoneMask = IMask(
+            document.getElementById('nTelefono'), {
+            mask: '(000)000-0000'
+        });
+
+        var cedulaMask = IMask(
+            document.getElementById('nCedula'), {
+            mask: '000-0000000-0'
+        });
+
+        console.log("los scripts sirven");
+
+        function removeMask() {
+            var phoneMask = IMask(
+                document.getElementById('nTelefono'), {
+                mask: '0000000000'
+            });
+
+            var cedulaMask = IMask(
+                document.getElementById('nCedula'), {
+                mask: '00000000000'
+            });
+
+        }
+
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

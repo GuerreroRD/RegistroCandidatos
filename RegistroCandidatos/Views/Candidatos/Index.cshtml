@@ -5,68 +5,119 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<br />
+<h3 class="text-verdeReservas">CANDIDATOS BANRESERVAS</h3>
+<hr />
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="text-uppercase btn btn-VerdeReservas"><i class="fa-solid fa-user-plus me-2"></i>Añadir Nuevo</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Cedula)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombres)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Apellidos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaDeNacimiento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrabajoActual)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExpectativaSalarial)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cedula)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombres)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apellidos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaDeNacimiento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genero.ID_Genero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrabajoActual)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpectativaSalarial)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID_Candidato">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID_Candidato">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID_Candidato">Delete</a>
-            </td>
-        </tr>
+
+<br />
+<br />
+
+
+
+<div class="row">
+
+    <table id="tbCandidatos" class="table table-striped  w-100 border">
+        <thead>
+            <tr class="text-azulmapre">
+                <th>#ID</th>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>CEDULA</th>
+                <th>GENERO</th>
+                <th>FECHA DE NACIMIENTO</th>
+                <th>TRABAJO ACTUAL</th>
+                <th>EXPECTATIVA SALARIAL</th>
+                <th></th>
+
+
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+@section Scripts{
+
+
+
+    <script>
+        $(document).ready(function () {
+
+
+            //$('#tbTutores').on('click', 'tbody tr', function () {
+            //    var row = table.row($(this)).data();
+            //    var identificador = row.tutor_Id;
+            //    //console.log(row);   //full row of array data
+            //    //console.log(identificador);   //EmployeeId
+            //    window.open(`/Tutores/Details/${identificador}`,'_self');
+            //});
+
+            $('#tbCandidatos tbody').on('click', '[id*=btnEditar]', function () {
+                var row = table.row($(this).parents('tr')).data();
+                var identificador = row.tutor_Id;
+                console.log(identificador);
+                window.open(`/Tutores/Edit/${identificador}`, '_self');
+            });
+
+            var table = $("#tbCandidatos").DataTable({
+
+                language: {
+                    paginate: {
+                        next: 'Siguiente', // or '→'
+                        previous: 'Anterior' // or '←'
+                    },
+                    search: "Buscar:",
+                },
+
+                "ajax": {
+                    "url": "@Url.Action("Applicant","Candidatos")",
+                    "type": "POST",
+                    "datatype": "json"
+
+                },
+                "processing": false,
+                "serverSide": true,
+                "searching": true,
+                "filter": true,
+
+
+                "columns": [
+                    { "data": "candidato_Id", name: "candidato_Id" },
+                    { "data": "nombres", name: "nombres" },
+                    { "data": "apellidos", name: "apellidos" },
+                    { "data": "cedula", name: "cedula" },
+                    { "data": "genero", name: "genero" },
+                    { "data": "fechaDeNacimiento", name: "fechaDeNacimiento" },
+                    { "data": "trabajoActual", name: "trabajoActual" },
+                    { "data": "expectativaSalarial", name: "expectativaSalarial" },
+                    {
+                        "data": null, title: 'ACCIONES',
+                        "render": function () { return '<div class=""><i  class="fa-solid fa-pen-to-square btn btn-azulmapre me-2" id="btnEditar"></i><i class="fa-solid fa-trash btn btn-azulmapre" id="btnEliminar"></i></div>' }
+                    },
+
+                ]
+
+
+
+
+
+            });
+
+
+
+
+
+
+        });
+
+
+    </script>
+
 }
-    </tbody>
-</table>
+
