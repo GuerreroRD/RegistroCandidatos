@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kr/qer0TRRi2dHUum0L4OLBy0EarUTKFomkKqDBBaYQ=",
+  "Hash": "mwAg7ktJnSrutWHeNMUWBNLGuPcAh7x3vOv8AX8aaJA=",
   "Source": "RegistroCandidatos",
   "BasePath": "_content/RegistroCandidatos",
   "Mode": "Default",
@@ -2429,6 +2429,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\GitRepos\\RegistroCandidatos\\wwwroot\\lib\\SimpleMoneyMask\\simple-mask-money.js",
+      "SourceId": "RegistroCandidatos",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitRepos\\RegistroCandidatos\\wwwroot\\",
+      "BasePath": "_content/RegistroCandidatos",
+      "RelativePath": "lib/SimpleMoneyMask/simple-mask-money.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\SimpleMoneyMask\\simple-mask-money.js"
+    },
+    {
+      "Identity": "D:\\GitRepos\\RegistroCandidatos\\wwwroot\\lib\\SimpleMoneyMask\\simple-mask-money.js.map",
+      "SourceId": "RegistroCandidatos",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitRepos\\RegistroCandidatos\\wwwroot\\",
+      "BasePath": "_content/RegistroCandidatos",
+      "RelativePath": "lib/SimpleMoneyMask/simple-mask-money.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\SimpleMoneyMask\\simple-mask-money.js.map"
     }
   ]
 }

@@ -59,7 +59,7 @@ namespace RegistroCandidatos.Migrations
                     b.HasIndex("Cedula")
                         .IsUnique();
 
-                    b.ToTable("Candidato");
+                    b.ToTable("Candidato", (string)null);
                 });
 #pragma warning restore 612, 618
         }

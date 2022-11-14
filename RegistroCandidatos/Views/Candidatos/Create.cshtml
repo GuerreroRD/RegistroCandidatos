@@ -27,7 +27,7 @@
                 <div class="col-5 me-3">
                     <div class="form-group">
                         <label asp-for="Nombres" class="control-label"></label>
-                        <input asp-for="Nombres" class="form-control" />
+                        <input asp-for="Nombres" class="form-control" placeholder="Ej: Juan Alberto"/>
                         <span asp-validation-for="Nombres" class="text-danger"></span>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                 <div class="col-5">
                     <div class="form-group">
                         <label asp-for="Apellidos" class="control-label"></label>
-                        <input asp-for="Apellidos" class="form-control" />
+                        <input asp-for="Apellidos" class="form-control" placeholder="Ej: Perez Garcia"/>
                         <span asp-validation-for="Apellidos" class="text-danger"></span>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="col-5 me-3">
                     <div class="form-group">
                         <label asp-for="Cedula" class="control-label"></label>
-                        <input asp-for="Cedula" class="form-control" id="nCedula" />
+                        <input asp-for="Cedula" class="form-control" id="nCedula" placeholder="Ej: 001-0022548-2"/>
                         <span asp-validation-for="Cedula" class="text-danger"></span>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                 <div class="col-5">
                     <div class="form-group">
                         <label asp-for="TrabajoActual" class="control-label"></label>
-                        <input asp-for="TrabajoActual" class="form-control" />
+                        <input asp-for="TrabajoActual" class="form-control" placeholder="Ej: Desarrollador Web"/>
                         <span asp-validation-for="TrabajoActual" class="text-danger"></span>
                     </div>
                 </div>
@@ -83,7 +83,10 @@
                 <div class="col-5 me-3">
                     <div class="form-group">
                         <label asp-for="ExpectativaSalarial" class="control-label"></label>
-                        <input asp-for="ExpectativaSalarial" class="form-control" />
+                        <div class="input-group">
+                            <span class="input-group-text">RD$</span>
+                            <input asp-for="ExpectativaSalarial" class="form-control" id="ExSalarial"  />
+                        </div>
                         <span asp-validation-for="ExpectativaSalarial" class="text-danger"></span>
                     </div>
                 </div>
@@ -114,9 +117,18 @@
     <script type="text/javascript">
 
 
-        var phoneMask = IMask(
-            document.getElementById('nTelefono'), {
-            mask: '(000)000-0000'
+        let MontoSolic = SimpleMaskMoney.setMask('#ExSalarial', {
+            prefix: '',
+            suffix: '',
+            fixed: true,
+            fractionDigits: 2,
+            decimalSeparator: '.',
+            thousandsSeparator: ',',
+            emptyOrInvalid: () => {
+                return this.SimpleMaskMoney.args.fixed
+                    ? `0${this.SimpleMaskMoney.args.decimalSeparator}00`
+                    : `_${this.SimpleMaskMoney.args.decimalSeparator}__`;
+            }
         });
 
         var cedulaMask = IMask(
@@ -127,10 +139,6 @@
         console.log("los scripts sirven");
 
         function removeMask() {
-            var phoneMask = IMask(
-                document.getElementById('nTelefono'), {
-                mask: '0000000000'
-            });
 
             var cedulaMask = IMask(
                 document.getElementById('nCedula'), {
