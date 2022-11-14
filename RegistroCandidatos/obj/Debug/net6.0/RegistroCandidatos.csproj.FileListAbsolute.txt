@@ -529,3 +529,4 @@ D:\GitRepos\RegistroCandidatos\obj\Debug\net6.0\RegistroCandidatos.pdb
 D:\GitRepos\RegistroCandidatos\obj\Debug\net6.0\RegistroCandidatos.genruntimeconfig.cache
 D:\GitRepos\RegistroCandidatos\obj\Debug\net6.0\ref\RegistroCandidatos.dll
 D:\GitRepos\RegistroCandidatos\bin\Debug\net6.0\libman.json
+C:\Users\GuerreroRD\Source\Repos\RegistroCandidatos\RegistroCandidatos\bin\Debug\net6.0\libman.json

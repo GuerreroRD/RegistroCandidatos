@@ -17,7 +17,7 @@ body {
   margin-bottom: 60px;
 }
 
-.bg-VerdeReservas {
+.bg-verdeReservas {
     background-color: #264e72;
 }
 
@@ -25,12 +25,12 @@ body {
     color: #264e72 !important;
 }
 
-.btn-VerdeReservas {
+.btn-verdeReservas {
     color: #fff;
     background-color: #264e72 !important;
 }
 
-.btn-VerdeReservas:hover {
+.btn-verdeReservas:hover {
     color: #fff;
     background-color: #f89420 !important;
 }
