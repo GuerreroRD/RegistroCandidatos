@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.bg-verdeReservas {
+    background-color: #264e72;
+}
+
+.text-verdeReservas {
+    color: #264e72 !important;
+}
+
+.btn-verdeReservas {
+    color: #fff;
+    background-color: #264e72 !important;
+}
+
+.btn-verdeReservas:hover {
+    color: #fff;
+    background-color: #f89420 !important;
+}
+
+table.dataTable td {
+    font-size: 0.8rem;
+    text-align:center;
+}
+table.dataTable th {
+    font-size: 0.8rem;
+}
