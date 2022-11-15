@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O5qAGfxzVlVsKxYBkAMF7amjfrgIyaYjLfa+uiTPo7fwqPxbe87xSWvVN7lT3B4o6Dgaslz6Pu7FvXT5ca4Slw==",
+  "dgSpecHash": "FVHusxFyQLRNXbnEZQExJxPzFiMtISR4kPvXZXQQRWDRpYkNnRPbVdmdIB5Lh8xdRCUdY0sXYsIwVtiUZuJ3sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\david fermin\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
+  "projectFilePath": "C:\\Users\\david fermin\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david fermin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\david fermin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

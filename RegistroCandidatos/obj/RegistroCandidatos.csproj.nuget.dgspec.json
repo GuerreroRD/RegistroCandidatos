@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david fermin\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {}
+    "C:\\Users\\david fermin\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david fermin\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {
+    "C:\\Users\\david fermin\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david fermin\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
+        "projectUniqueName": "C:\\Users\\david fermin\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
         "projectName": "RegistroCandidatos",
-        "projectPath": "C:\\Users\\david fermin\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
+        "projectPath": "C:\\Users\\david fermin\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
         "packagesPath": "C:\\Users\\david fermin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david fermin\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\obj\\",
+        "outputPath": "C:\\Users\\david fermin\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david fermin\\AppData\\Roaming\\NuGet\\NuGet.Config",

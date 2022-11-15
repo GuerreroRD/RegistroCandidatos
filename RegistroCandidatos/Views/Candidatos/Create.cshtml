@@ -34,7 +34,7 @@
 
                 <div class="col-5">
                     <div class="form-group">
-                        <label asp-for="Apellidos" class="control-label text-verdeReservas"></label></label><span class="text-danger">*</span>
+                        <label asp-for="Apellidos" class="control-label text-verdeReservas"></label><span class="text-danger">*</span>
                         <input asp-for="Apellidos" class="form-control" placeholder="Ej: Perez Garcia"/>
                         <span asp-validation-for="Apellidos" class="text-danger"></span>
                     </div>
@@ -43,7 +43,7 @@
             <div class="d-flex col-lg-12 mb-2">
                 <div class="col-5 me-3">
                     <div class="form-group">
-                        <label asp-for="Cedula" class="control-label text-verdeReservas"></label></label><span class="text-danger">*</span>
+                        <label asp-for="Cedula" class="control-label text-verdeReservas"></label><span class="text-danger">*</span>
                         <input asp-for="Cedula" class="form-control" id="nCedula" placeholder="Ej: 001-0022548-2"/>
                         <span asp-validation-for="Cedula" class="text-danger"></span>
                     </div>
@@ -51,7 +51,7 @@
 
                 <div class="col-5">
                     <div class="form-group">
-                        <label asp-for="FechaDeNacimiento" class="control-label text-verdeReservas"></label></label><span class="text-danger">*</span>
+                        <label asp-for="FechaDeNacimiento" class="control-label text-verdeReservas"></label><span class="text-danger">*</span>
                         <input asp-for="FechaDeNacimiento" class="form-control" />
                         <span asp-validation-for="FechaDeNacimiento" class="text-danger"></span>
                     </div>
@@ -61,7 +61,7 @@
             <div class="d-flex col-lg-12 mb-2">
                 <div class="col-5 me-3">
                     <div class="form-group">
-                        <label asp-for="Genero" class="control-label text-verdeReservas"></label></label><span class="text-danger">*</span>
+                        <label asp-for="Genero" class="control-label text-verdeReservas"></label><span class="text-danger">*</span>
                         <select asp-for="Genero" class="form-control" asp-items="@Html.GetEnumSelectList<NombreGenero>()">
                             <option selected disabled value="">Seleccione un genero</option>
                         </select>
