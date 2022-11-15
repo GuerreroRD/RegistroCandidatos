@@ -116,9 +116,7 @@ namespace RegistroCandidatos.Controllers
         // GET: Candidatos/Create
         public IActionResult Create()
         {
-            
-
-            
+          
             return View();
         }
 

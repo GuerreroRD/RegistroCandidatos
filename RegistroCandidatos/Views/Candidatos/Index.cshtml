@@ -50,14 +50,8 @@
         $(document).ready(function () {
 
 
-            //$('#tbTutores').on('click', 'tbody tr', function () {
-            //    var row = table.row($(this)).data();
-            //    var identificador = row.tutor_Id;
-            //    //console.log(row);   //full row of array data
-            //    //console.log(identificador);   //EmployeeId
-            //    window.open(`/Tutores/Details/${identificador}`,'_self');
-            //});
-
+            //Convierte los botones dentro del datatable Clickeables y llaman
+            //su funcion correspondiente
             $('#tbCandidatos tbody').on('click', '[id*=btnEditar]', function () {
                 var row = table.row($(this).parents('tr')).data();
                 var identificador = row.candidato_Id;
@@ -91,6 +85,8 @@
                     "info": "Mostrando Pagina _PAGE_ de _PAGES_",
                 },
 
+                "responsive":true,
+
                 "ajax": {
                     "url": "@Url.Action("Applicant","Candidatos")",
                     "type": "POST",
@@ -101,6 +97,7 @@
                 "serverSide": true,
                 "searching": true,
                 "filter": true,
+                
                 
 
 
