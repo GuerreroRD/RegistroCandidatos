@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GuerreroRD\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {}
+    "C:\\Users\\GuerreroRD\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GuerreroRD\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {
+    "C:\\Users\\GuerreroRD\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GuerreroRD\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
+        "projectUniqueName": "C:\\Users\\GuerreroRD\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
         "projectName": "RegistroCandidatos",
-        "projectPath": "C:\\Users\\GuerreroRD\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
+        "projectPath": "C:\\Users\\GuerreroRD\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
         "packagesPath": "C:\\Users\\GuerreroRD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GuerreroRD\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\obj\\",
+        "outputPath": "C:\\Users\\GuerreroRD\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

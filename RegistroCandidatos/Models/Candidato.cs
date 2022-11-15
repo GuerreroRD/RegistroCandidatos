@@ -7,11 +7,16 @@ namespace RegistroCandidatos.Models
 {
 	public enum NombreGenero
 	{
+        [Display(Name ="Masculino")]
 		Masculino,
-		Femenino,
-		Otros
 
-	}
+        [Display(Name = "Femenino")]
+        Femenino,
+
+        [Display(Name = "Otros")]
+        Otros
+
+    }
     //Este codigo activa el campo Cedula como unico aplicandole un indice
     [Index(nameof(Cedula), IsUnique = true)]
     public class Candidato

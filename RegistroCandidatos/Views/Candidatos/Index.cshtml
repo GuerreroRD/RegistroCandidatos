@@ -23,7 +23,7 @@
     <table id="tbCandidatos" class="table table-striped  w-100 border">
         <thead>
             <tr class="text-azulmapre">
-                <th class="text-verdeReservas te">#ID</th>
+                
                 <th class="text-verdeReservas">NOMBRES</th>
                 <th class="text-verdeReservas">APELLIDOS</th>
                 <th class="text-verdeReservas">CEDULA</th>
@@ -99,21 +99,21 @@
                 "serverSide": true,
                 "searching": true,
                 "filter": true,
-                "autoWidth": true,
+                
 
 
                 "columns": [
-                    { "data": "candidato_Id", name: "candidato_Id" },
+                    
                     { "data": "nombres", name: "nombres" },
                     { "data": "apellidos", name: "apellidos" },
                     { "data": "cedula", name: "cedula" },
                     { "data": "genero", name: "genero" },
-                    { "data": "fechaDeNacimiento", name: "fechaDeNacimiento" },
+                    { "data": "fechaDeNacimiento", name: "fechaDeNacimiento","width":"17%" },
                     { "data": "trabajoActual", name: "trabajoActual" },
                     { "data": "expectativaSalarial", name: "expectativaSalarial"},
                     {
-                        "data": null, title: 'ACCIONES', "width": "13%",
-                        "render": function () { return '<div class=""><i  class="fa-solid fa-pen-to-square btn btn-VerdeReservas me-2" id="btnEditar"></i><i  class="fa-solid fa-file-lines btn btn-VerdeReservas me-2" id="btnDetalle"></i><i class="fa-solid fa-trash btn btn-danger" id="btnEliminar"></i></div>' }
+                        "data": null, title: 'ACCIONES', "width": "16%",
+                        "render": function () { return '<div class=""><i  class="fa-solid fa-pen-to-square btn btn-verdeReservas me-2" id="btnEditar"></i><i  class="fa-solid fa-file-lines btn btn-verdeReservas me-2" id="btnDetalle"></i><i class="fa-solid fa-trash btn btn-danger" id="btnEliminar"></i></div>' }
                     },
 
                 ]

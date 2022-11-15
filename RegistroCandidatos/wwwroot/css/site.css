@@ -35,3 +35,10 @@ body {
     background-color: #f89420 !important;
 }
 
+table.dataTable td {
+    font-size: 0.8rem;
+    text-align:center;
+}
+table.dataTable th {
+    font-size: 0.8rem;
+}

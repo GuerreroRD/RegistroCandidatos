@@ -44,7 +44,7 @@ namespace RegistroCandidatos.Controllers
 					nombres = b.Nombres,
 					apellidos = b.Apellidos,
 					cedula = Int64.Parse((b.Cedula.Replace("-", ""))).ToString("000-0000000-0"),
-                    genero = b.Genero,
+                    genero = b.Genero.ToString(),
 					fechaDeNacimiento = b.FechaDeNacimiento.ToString("dd/MM/yyyy"),
 					trabajoActual = b.TrabajoActual,
 					expectativaSalarial = b.ExpectativaSalarial
@@ -141,6 +141,7 @@ namespace RegistroCandidatos.Controllers
 
 			else if (ModelState.IsValid)
             {
+                
 				_db.Add(candidato);
                 await _db.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

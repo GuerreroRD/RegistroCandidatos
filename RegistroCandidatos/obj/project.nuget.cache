@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E3QE/zGxKz+AJKUbeg/COpD2ERQ7pd8tH/wVck6h+Uy5PcSy3qjttcZXMiBVXUNaZv4VzLiFZ3PoeKvI+znd5Q==",
+  "dgSpecHash": "M3BYsrsP8reCRwHVc5HBG2Cdh45C1VlgAKBklRz8+7zB2+6IKycg/G2rV/O9PWA+Bm88O+d9lCpDzrnj9LP6Lg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\GuerreroRD\\Source\\Repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
+  "projectFilePath": "C:\\Users\\GuerreroRD\\source\\repos\\RegistroCandidatos\\RegistroCandidatos\\RegistroCandidatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GuerreroRD\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\GuerreroRD\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
